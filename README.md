@@ -91,7 +91,7 @@ docker compose down
     - OpenWebUI runs internally on port **8080**, but is exposed as **3009** on the host.
     - Modify `docker-compose.yml` if you prefer a different port.
 
-🚀 **Pro Tip:**
+## 🚀 **Pro Tip:**
 
 - Install custom AI models in OpenWebUI to maximize AI-powered workflows!
 - Pair with Tailscale to get your own AI chat on the fly
