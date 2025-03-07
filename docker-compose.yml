@@ -1,0 +1,19 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:ollama
+    container_name: open-webui-local
+    runtime: nvidia
+    ports:
+      - "3009:8080" # Expose port 8080 in the container as 3009 on the host
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./ollama:/root/.ollama
+      - ./open-webui:/app/backend/data
+    deploy:
+      restart_policy:
+        condition: always
+
+volumes:
+  ollama:
+  open-webui:
